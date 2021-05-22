@@ -33,6 +33,10 @@ public class LinkedList<T> {
             tail = newNode;
         }
     }
+    public void insertNode(INode<Integer> myFirstNode, INode<Integer> mySecondNode) {
+        mySecondNode.setNext(myFirstNode.getNext());
+        myFirstNode.setNext(mySecondNode);
+    }
 
     public void printMyNodes() {
         INode tempNode = this.head;

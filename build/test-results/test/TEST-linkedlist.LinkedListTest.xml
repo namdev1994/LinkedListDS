@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="linkedlist.LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-22T09:38:23" hostname="LAPTOP-LN4L4KQQ" time="0.036">
+<testsuite name="linkedlist.LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-22T09:48:46" hostname="LAPTOP-LN4L4KQQ" time="0.037">
   <properties/>
-  <testcase name="GivenThreeNumbersWhenAddedToLinkedListShouldAddedtoBottom()" classname="linkedlist.LinkedListTest" time="0.036"/>
+  <testcase name="GivenANodeInsertedInBetweenResultingNodesReturnTrue()" classname="linkedlist.LinkedListTest" time="0.037"/>
   <system-out><![CDATA[My Nodes: 56->30->70
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
