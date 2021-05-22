@@ -64,6 +64,22 @@ public class LinkedListTest {
         boolean result = (myLinkedList.head.equals(mySecondNode) && myLinkedList.tail.equals(myThirdNode));
         Assertions.assertEquals(true, result);
     }
+    /* Remove Last Node */
+    @Test
+    public void PopNodeFromLastShouldReturnTrue() {
+        Node<Integer> myFirstNode = new Node<>(56);
+        Node<Integer> mySecondNode = new Node<>(30);
+        Node<Integer> myThirdNode = new Node<>(70);
+        LinkedList myLinkedList = new LinkedList();
+        myLinkedList.addFirst(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.printMyNodes();
+        myLinkedList.popLast();
+        myLinkedList.printMyNodes();
+        boolean result = myLinkedList.head.equals(myFirstNode) && myLinkedList.tail.equals(mySecondNode);
+        Assertions.assertTrue(result);
+    }
 }
 
 

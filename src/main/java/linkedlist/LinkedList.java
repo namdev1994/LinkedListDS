@@ -37,11 +37,21 @@ public class LinkedList<T> {
         mySecondNode.setNext(myFirstNode.getNext());
         myFirstNode.setNext(mySecondNode);
     }
-    /* Delete/Pop First Node */
+    /* Delete First Node */
     public INode pop() {
         INode  tempNode = this.head;
         this.head = head.getNext();
         return tempNode;
+    }
+
+    /* Delete Last Node */
+    public INode popLast() {
+        INode tempNode = head;
+        while (!tempNode.getNext().equals(tail)) {
+            tempNode = tempNode.getNext();
+        }
+        this.tail = tempNode;
+        return null;
     }
 
     public void printMyNodes() {
