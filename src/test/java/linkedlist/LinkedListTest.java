@@ -93,6 +93,24 @@ public class LinkedListTest {
         INode searchNode = myLinkedList.searchNode(30);
         Assertions.assertEquals(searchNode, mySecondNode);
     }
+    /* Search dataNode and Insert the Node */
+    @Test
+    public void AfterInserting40After30ShouldPassTheTest(){
+        Node<Integer> myFirstNode = new Node<>(56);
+        Node<Integer> mySecondNode = new Node<>(30);
+        Node<Integer> myThirdNode = new Node<>(40);
+        Node<Integer> myFourthNode = new Node<>(70);
+        LinkedList myLinkedList = new LinkedList();
+        myLinkedList.addFirst(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myFourthNode);
+        myLinkedList.printMyNodes();
+        myLinkedList.insertNode(myLinkedList.searchNode(30), myThirdNode);
+        myLinkedList.printMyNodes();
+        boolean result = myLinkedList.head.equals(myFirstNode) &&  myLinkedList.head.getNext().equals(mySecondNode) &&  myLinkedList.head.getNext().getNext().equals(myThirdNode) &&  myLinkedList.tail.equals(myFourthNode);
+        Assertions.assertTrue(result);
+
+    }
 }
 
 
