@@ -1,7 +1,29 @@
 package linkedlist;
 
-public class Node {
-    public static void main(String[] args) {
-        System.out.println("Welcome in Linkedlist creation program");
+public class Node <T>{
+        private T data;
+        private Node next;
+
+        public Node(T data) //constructor
+        {
+            this.setData(data);
+            this.setNext(null);
+        }
+
+        public T getData() {
+            return data;
+        }
+
+        public void setData(T data) {
+            this.data = data;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public void setNext(Node next) {
+            this.next = next;
+        }
     }
-}
+
