@@ -53,6 +53,17 @@ public class LinkedList<T> {
         this.tail = tempNode;
         return null;
     }
+    /* Search Node with given key */
+    public INode searchNode(T key) {
+        INode tempNode = this.head;
+        while (tempNode != null) {
+            if (tempNode.getData() == key) {
+                return tempNode;
+            }
+            tempNode = tempNode.getNext();
+        }
+        return null;
+    }
 
     public void printMyNodes() {
         INode tempNode = this.head;

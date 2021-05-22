@@ -80,6 +80,19 @@ public class LinkedListTest {
         boolean result = myLinkedList.head.equals(myFirstNode) && myLinkedList.tail.equals(mySecondNode);
         Assertions.assertTrue(result);
     }
+    /* Search Node with given data */
+    @Test
+    public void SearchNodeForGivenDataIfFoundShouldReturnTrue() {
+        Node<Integer> myFirstNode = new Node<>(70);
+        Node<Integer> mySecondNode = new Node<>(30);
+        Node<Integer> myThirdNode = new Node<>(56);
+        LinkedList<Integer> myLinkedList = new LinkedList<Integer>();
+        myLinkedList.addFirst(myFirstNode);
+        myLinkedList.addFirst(mySecondNode);
+        myLinkedList.addFirst(myThirdNode);
+        INode searchNode = myLinkedList.searchNode(30);
+        Assertions.assertEquals(searchNode, mySecondNode);
+    }
 }
 
 
