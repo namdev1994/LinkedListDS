@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="linkedlist.LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-22T12:06:45" hostname="LAPTOP-LN4L4KQQ" time="0.038">
+<testsuite name="linkedlist.LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-22T18:19:19" hostname="LAPTOP-LN4L4KQQ" time="0.036">
   <properties/>
-  <testcase name="GivenANodeInsertedInBetweenResultingNodesReturnTrue()" classname="linkedlist.LinkedListTest" time="0.038"/>
-  <system-out><![CDATA[My Nodes: 56->30->70
+  <testcase name="PopNodeFromFrontShouldReturnTrue()" classname="linkedlist.LinkedListTest" time="0.036"/>
+  <system-out><![CDATA[My Nodes: 30->70
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

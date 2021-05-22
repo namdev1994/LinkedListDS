@@ -22,20 +22,26 @@ public class LinkedList<T> {
         }
     }
     /* Add Last */
-    public void addLast(INode newNode) {
+    public void append(INode newNode) {
         if (this.head == null) {
             this.head = newNode;
         }
-        if (tail == null) {
-            tail = newNode;
+        if (this.tail == null) {
+            this.tail = newNode;
         } else {
             this.tail.setNext(newNode);
-            tail = newNode;
+            this.tail = newNode;
         }
     }
     public void insertNode(INode<Integer> myFirstNode, INode<Integer> mySecondNode) {
         mySecondNode.setNext(myFirstNode.getNext());
         myFirstNode.setNext(mySecondNode);
+    }
+    /* Delete/Pop First Node */
+    public INode pop() {
+        INode  tempNode = this.head;
+        this.head = head.getNext();
+        return tempNode;
     }
 
     public void printMyNodes() {

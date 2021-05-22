@@ -25,9 +25,9 @@ public class LinkedListTest {
         Node<Integer> mySecondNode = new Node<>(30);
         Node<Integer> myThirdNode = new Node<>(70);
         LinkedList<Integer> myLinkedList = new LinkedList<Integer>();
-        myLinkedList.addLast(myFirstNode);
-        myLinkedList.addLast(mySecondNode);
-        myLinkedList.addLast(myThirdNode);
+        myLinkedList.append(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
         myLinkedList.printMyNodes();
         boolean result = (myLinkedList.head.equals(myFirstNode) && myLinkedList.head.getNext().equals(mySecondNode)
                 && myLinkedList.tail.equals(myThirdNode));
@@ -40,8 +40,8 @@ public class LinkedListTest {
         Node<Integer> mySecondNode = new Node<>(30);
         Node<Integer> myThirdNode = new Node<>(70);
         LinkedList<Integer> myLinkedList = new LinkedList<Integer>();
-        myLinkedList.addLast(myFirstNode);
-        myLinkedList.addLast(myThirdNode);
+        myLinkedList.append(myFirstNode);
+        myLinkedList.append(myThirdNode);
         myLinkedList.insertNode(myFirstNode, mySecondNode);
         myLinkedList.printMyNodes();
         boolean result = (myLinkedList.head.equals(myFirstNode) && myLinkedList.head.getNext().equals(mySecondNode)
@@ -49,5 +49,21 @@ public class LinkedListTest {
         Assertions.assertEquals(true, result);
 
     }
-
+    /* Remove First Node */
+    @Test
+    public void PopNodeFromFrontShouldReturnTrue() {
+        Node<Integer> myFirstNode = new Node<>(56);
+        Node<Integer> mySecondNode = new Node<>(30);
+        Node<Integer> myThirdNode = new Node<>(70);
+        LinkedList<Integer> myLinkedList = new LinkedList<Integer>();
+        myLinkedList.append(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.pop();
+        myLinkedList.printMyNodes();
+        boolean result = (myLinkedList.head.equals(mySecondNode) && myLinkedList.tail.equals(myThirdNode));
+        Assertions.assertEquals(true, result);
+    }
 }
+
+
