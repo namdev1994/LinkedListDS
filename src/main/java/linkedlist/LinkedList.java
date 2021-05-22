@@ -64,6 +64,25 @@ public class LinkedList<T> {
         }
         return null;
     }
+    /* delete the specified element from the linked list */
+    public void remove(INode removeNode) {
+        INode myTempNode = head;
+        while (myTempNode.getNext() != removeNode) {
+            myTempNode = myTempNode.getNext();
+        }
+        INode myTempNode2 = myTempNode;
+        myTempNode2 = myTempNode.getNext().getNext();
+        myTempNode.setNext(myTempNode2);
+    }
+    public void getSize(INode head) {
+        int nodeCount = 0;
+        INode temp = head;
+        while (temp != null) {
+            nodeCount++;
+            temp = temp.getNext();
+        }
+        System.out.println("Size: " + nodeCount);
+    }
 
     public void printMyNodes() {
         INode tempNode = this.head;

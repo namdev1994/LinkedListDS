@@ -111,6 +111,25 @@ public class LinkedListTest {
         Assertions.assertTrue(result);
 
     }
+    /* delete dataNode and print size of Linkedlist */
+    @Test
+    public void Deleteing40InLinkedListshouldPassTest(){
+        Node<Integer> myFirstNode = new Node<>(56);
+        Node<Integer> mySecondNode = new Node<>(30);
+        Node<Integer> myThirdNode = new Node<>(40);
+        Node<Integer> myFourthNode = new Node<>(70);
+        LinkedList myLinkedList = new LinkedList();
+        myLinkedList.addFirst(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.append(myFourthNode);
+        myLinkedList.printMyNodes();
+        myLinkedList.remove(myThirdNode);
+        myLinkedList.printMyNodes();
+        myLinkedList.getSize(myFirstNode);
+        boolean result = myLinkedList.head.equals(myFirstNode) && myLinkedList.head.getNext().equals(mySecondNode) && myLinkedList.tail.equals(myFourthNode);
+        Assertions.assertTrue(result);
+    }
 }
 
 
